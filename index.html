@@ -777,6 +777,54 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
         .cta-content p { font-size: 18px; color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 16px; }
         .cta-note { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
 
+        .cta-form {
+            max-width: 480px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 32px;
+        }
+        .cta-form input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+        }
+        .cta-form input::placeholder { color: rgba(255,255,255,0.6); }
+        .cta-form input:focus {
+            border-color: rgba(255,255,255,0.6);
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.15);
+        }
+        .cta-form button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background: var(--white);
+            color: var(--navy);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s;
+            margin-top: 4px;
+        }
+        .cta-form button:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            transform: translateY(-1px);
+        }
+
         .cta-section .btn-primary {
             background: var(--white);
             color: var(--navy);
@@ -1886,6 +1934,14 @@ section { display: block !important; position: relative !important; float: none 
 <h2>Find the patients your system is missing.</h2>
 <p>TAILRD reveals where care breaks down - clinically and operationally - and gives your teams the insight to fix it.</p>
 <div class="cta-note">No PHI required. No integration needed. System-level findings in ~2 weeks.</div>
+<form class="cta-form" action="https://formspree.io/f/xlgpvvvd" method="POST">
+<input type="hidden" name="_subject" value="New TAILRD Lead">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="text" name="title" placeholder="Title / Role" required>
+<input type="text" name="hospital" placeholder="Hospital / Health System" required>
+<button type="submit">Request Your Free Audit</button>
+</form>
 </div>
 </div>
 </section>
