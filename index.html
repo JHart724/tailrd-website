@@ -323,6 +323,33 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
             transform: translateY(-6px);
             box-shadow: var(--shadow-xl), inset 0 1px 0 rgba(255,255,255,0.8);
         }
+        /* Module flip cards: override glass-card hover/transition on the inner card */
+        .module-card-wrapper .module-card.glass-card {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border: none;
+            box-shadow: none;
+        }
+        .module-card-wrapper .module-card.glass-card:hover {
+            transform: rotateY(180deg);
+            box-shadow: none;
+        }
+        /* Apply glass styling to the front face instead */
+        .module-front {
+            background: var(--glass-bg);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+        .module-back {
+            border-radius: 20px;
+            border: 1px solid rgba(26,47,74,0.3);
+            box-shadow: var(--shadow-lg);
+        }
 
         /* ========================================
            DIFFERENTIATORS - WITH INTRO
@@ -626,8 +653,50 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
 
         .modules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
 
-        .module-card { padding: 32px; position: relative; overflow: hidden; }
-        .module-card::after {
+        /* 3D Flip Card System */
+        .module-card-wrapper {
+            perspective: 1200px;
+            height: 260px;
+        }
+        .module-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            padding: 0;
+            overflow: visible;
+        }
+        .module-card-wrapper:hover .module-card {
+            transform: rotateY(180deg);
+        }
+        .module-card::after { display: none; }
+
+        .module-front,
+        .module-back {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            overflow: hidden;
+        }
+        .module-front {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .module-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .module-front {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            z-index: 2;
+        }
+        .module-front::after {
             content: '';
             position: absolute;
             bottom: 0; left: 0; right: 0;
@@ -636,7 +705,74 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
             opacity: 0;
             transition: opacity 0.3s;
         }
-        .module-card:hover::after { opacity: 1; }
+        .module-card-wrapper:hover .module-front::after { opacity: 0; }
+
+        .module-back {
+            transform: rotateY(180deg);
+            background: var(--navy);
+            background-image:
+                linear-gradient(135deg, rgba(45,139,154,0.15) 0%, transparent 50%),
+                linear-gradient(225deg, rgba(122,40,40,0.1) 0%, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .module-back-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top left;
+            display: block;
+            background: var(--navy);
+        }
+        /* Fallback when image fails to load */
+        .module-back-img[alt]::after {
+            content: attr(alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            inset: 0;
+            background: var(--navy);
+            color: rgba(255,255,255,0.3);
+            font-size: 13px;
+            text-align: center;
+            padding: 20px;
+        }
+        .module-back-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 14px 18px;
+            background: linear-gradient(0deg, rgba(26,47,74,0.92) 0%, rgba(26,47,74,0.6) 60%, transparent 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .module-back-overlay span {
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.01em;
+        }
+        .module-back-overlay .flip-hint {
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            font-weight: 400;
+        }
+
+        /* Flip hint on front */
+        .module-flip-hint {
+            margin-top: auto;
+            font-size: 11px;
+            color: var(--teal-ai);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .module-card-wrapper:hover .module-flip-hint { opacity: 0; }
+        .module-flip-hint svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
         .module-icon {
             width: 48px;
@@ -651,6 +787,46 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
         .module-icon svg { width: 24px; height: 24px; stroke: var(--teal-ai); stroke-width: 1.5; fill: none; }
         .module-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
         .module-card p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
+
+        /* Tier card screenshot reveal */
+        .tier-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .tier-screenshot {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+            border-radius: inherit;
+            overflow: hidden;
+        }
+        .tier-card:hover .tier-screenshot { opacity: 1; }
+        .tier-screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top left;
+        }
+        .tier-screenshot-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 14px 18px;
+            background: linear-gradient(0deg, rgba(26,47,74,0.95) 0%, rgba(26,47,74,0.7) 50%, transparent 100%);
+        }
+        .tier-screenshot-overlay .tier-level-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--teal-ai);
+        }
+        .tier-screenshot-overlay .tier-title-label {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+        }
 
         /* ========================================
            PARTNERS
@@ -1276,7 +1452,6 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
 
         /* Add a subtle chrome "top edge" to key cards */
         .diff-card,
-        .module-card,
         .tier-card,
         .partner-card,
         .leadership-card,
@@ -1286,7 +1461,7 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
         }
 
         .diff-card::before,
-        .module-card::before,
+        .module-front::before,
         .tier-card::before,
         .partner-card::before,
         .leadership-card::before,
@@ -1305,7 +1480,6 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
 
         /* Chrome edge hover treatment (no loud fills) */
         .diff-card:hover,
-        .module-card:hover,
         .tier-card:hover,
         .partner-card:hover{
             border-color: rgba(168,191,207,0.75) !important;
@@ -1315,13 +1489,19 @@ img, svg, canvas, video { max-width: 100%; height: auto; }
                 0 0 26px rgba(168,191,207,0.20);
             transform: translateY(-3px);
         }
+        /* Module cards use 3D flip - lift the wrapper instead */
+        .module-card-wrapper:hover {
+            filter: drop-shadow(0 22px 40px rgba(26,47,74,0.18));
+        }
 
         /* Make existing hover transitions smooth if not already */
         .diff-card,
-        .module-card,
         .tier-card,
         .partner-card{
             transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background 260ms ease;
+        }
+        .module-card-wrapper {
+            transition: filter 260ms ease;
         }
 
         /* Nav: pill feel + underline in chrome-blue */
@@ -1800,6 +1980,11 @@ section { display: block !important; position: relative !important; float: none 
 <div class="tier-desc">Identify risk and unmet need across the entire patient population.</div>
 <div class="tier-example">Example: Undiagnosed HFpEF, untreated AF, silent structural disease</div>
 <div class="tier-arrow">→</div>
+<!-- REPLACE src with executive dashboard screenshot -->
+<div class="tier-screenshot">
+<img src="assets/screenshots/platform-placeholder.png" alt="Population-level executive dashboard"/>
+<div class="tier-screenshot-overlay"><div class="tier-level-label">Tier 1</div><div class="tier-title-label">Population Dashboard</div></div>
+</div>
 </div>
 <div class="tier-card glass-card">
 <div class="tier-level">Tier 2</div>
@@ -1808,6 +1993,11 @@ section { display: block !important; position: relative !important; float: none 
 <div class="tier-desc">Prioritize patients who should already be receiving care.</div>
 <div class="tier-example">Example: Patients eligible for GDMT, anticoagulation, or referral</div>
 <div class="tier-arrow">→</div>
+<!-- REPLACE src with service-line worklist screenshot -->
+<div class="tier-screenshot">
+<img src="assets/screenshots/platform-placeholder.png" alt="Service line panel worklist"/>
+<div class="tier-screenshot-overlay"><div class="tier-level-label">Tier 2</div><div class="tier-title-label">Panel Worklist</div></div>
+</div>
 </div>
 <div class="tier-card glass-card">
 <div class="tier-level">Tier 3</div>
@@ -1815,6 +2005,11 @@ section { display: block !important; position: relative !important; float: none 
 <div class="tier-audience">Care Teams</div>
 <div class="tier-desc">Enable timely, appropriate intervention.</div>
 <div class="tier-example">Example: Referral, imaging, procedure, or therapy initiation</div>
+<!-- REPLACE src with patient detail screenshot -->
+<div class="tier-screenshot">
+<img src="assets/screenshots/platform-placeholder.png" alt="Patient detail recommendation view"/>
+<div class="tier-screenshot-overlay"><div class="tier-level-label">Tier 3</div><div class="tier-title-label">Patient Detail</div></div>
+</div>
 </div>
 </div>
 </div>
@@ -1828,36 +2023,109 @@ section { display: block !important; position: relative !important; float: none 
 <p>Each module is built as an offering: it identifies therapy gaps, flags missed interventions, and routes actionable worklists to the right teams.</p>
 </div>
 <div class="modules-grid">
+
+<!-- Heart Failure -->
+<div class="module-card-wrapper">
 <div class="module-card glass-card">
+<div class="module-front">
 <div class="module-icon"><svg viewbox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
 <h3>Heart Failure</h3>
 <p>Surfaces untreated and undertreated HF patients across primary and specialty care - before decompensation occurs.</p>
+<div class="module-flip-hint"><svg viewbox="0 0 24 24"><path d="M1 4v6h6M23 20v-6h-6"></path><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg> Hover to preview</div>
 </div>
+<div class="module-back">
+<!-- REPLACE src with actual Heart Failure screenshot -->
+<img class="module-back-img" src="assets/screenshots/platform-placeholder.png" alt="Heart Failure module screenshot"/>
+<div class="module-back-overlay"><span>Heart Failure Module</span><span class="flip-hint">Hover to flip back</span></div>
+</div>
+</div>
+</div>
+
+<!-- Electrophysiology -->
+<div class="module-card-wrapper">
 <div class="module-card glass-card">
+<div class="module-front">
 <div class="module-icon"><svg viewbox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
 <h3>Electrophysiology</h3>
 <p>Identifies rhythm patients who meet criteria for anticoagulation, monitoring, or intervention - but haven't received it.</p>
+<div class="module-flip-hint"><svg viewbox="0 0 24 24"><path d="M1 4v6h6M23 20v-6h-6"></path><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg> Hover to preview</div>
 </div>
+<div class="module-back">
+<!-- REPLACE src with actual EP screenshot -->
+<img class="module-back-img" src="assets/screenshots/platform-placeholder.png" alt="Electrophysiology module screenshot"/>
+<div class="module-back-overlay"><span>Electrophysiology Module</span><span class="flip-hint">Hover to flip back</span></div>
+</div>
+</div>
+</div>
+
+<!-- Structural Heart -->
+<div class="module-card-wrapper">
 <div class="module-card glass-card">
+<div class="module-front">
 <div class="module-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
 <h3>Structural Heart</h3>
 <p>Flags echo findings, referral gaps, and delayed interventions across the structural disease spectrum.</p>
+<div class="module-flip-hint"><svg viewbox="0 0 24 24"><path d="M1 4v6h6M23 20v-6h-6"></path><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg> Hover to preview</div>
 </div>
+<div class="module-back">
+<!-- REPLACE src with actual Structural Heart screenshot -->
+<img class="module-back-img" src="assets/screenshots/platform-placeholder.png" alt="Structural Heart module screenshot"/>
+<div class="module-back-overlay"><span>Structural Heart Module</span><span class="flip-hint">Hover to flip back</span></div>
+</div>
+</div>
+</div>
+
+<!-- Coronary -->
+<div class="module-card-wrapper">
 <div class="module-card glass-card">
+<div class="module-front">
 <div class="module-icon"><svg viewbox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
 <h3>Coronary</h3>
 <p>Detects missed opportunities in CAD risk stratification, diagnosis, and escalation of care.</p>
+<div class="module-flip-hint"><svg viewbox="0 0 24 24"><path d="M1 4v6h6M23 20v-6h-6"></path><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg> Hover to preview</div>
 </div>
+<div class="module-back">
+<!-- REPLACE src with actual Coronary screenshot -->
+<img class="module-back-img" src="assets/screenshots/platform-placeholder.png" alt="Coronary module screenshot"/>
+<div class="module-back-overlay"><span>Coronary Module</span><span class="flip-hint">Hover to flip back</span></div>
+</div>
+</div>
+</div>
+
+<!-- Valvular -->
+<div class="module-card-wrapper">
 <div class="module-card glass-card">
+<div class="module-front">
 <div class="module-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
 <h3>Valvular</h3>
 <p>Surfaces progressive valve disease earlier - when intervention can still change outcomes.</p>
+<div class="module-flip-hint"><svg viewbox="0 0 24 24"><path d="M1 4v6h6M23 20v-6h-6"></path><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg> Hover to preview</div>
 </div>
+<div class="module-back">
+<!-- REPLACE src with actual Valvular screenshot -->
+<img class="module-back-img" src="assets/screenshots/platform-placeholder.png" alt="Valvular module screenshot"/>
+<div class="module-back-overlay"><span>Valvular Module</span><span class="flip-hint">Hover to flip back</span></div>
+</div>
+</div>
+</div>
+
+<!-- Peripheral Vascular -->
+<div class="module-card-wrapper">
 <div class="module-card glass-card">
+<div class="module-front">
 <div class="module-icon"><svg viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
 <h3>Peripheral Vascular</h3>
 <p>Expands PAD detection, closes medical therapy gaps, identifies revascularization and limb-preservation candidates, and coordinates longitudinal pathways.</p>
+<div class="module-flip-hint"><svg viewbox="0 0 24 24"><path d="M1 4v6h6M23 20v-6h-6"></path><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg> Hover to preview</div>
 </div>
+<div class="module-back">
+<!-- REPLACE src with actual PVD screenshot -->
+<img class="module-back-img" src="assets/screenshots/platform-placeholder.png" alt="Peripheral Vascular module screenshot"/>
+<div class="module-back-overlay"><span>Peripheral Vascular Module</span><span class="flip-hint">Hover to flip back</span></div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 </section>
