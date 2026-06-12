@@ -35,7 +35,8 @@
   <nav class="nav" aria-label="Primary">
     <div class="container nav-inner">
       <a class="nav-brand" href="#top" aria-label="TAILRD Heart — home">
-        <img class="nav-logo" src="assets/logo.png" alt="TAILRD | Heart">
+        <img class="nav-mark" src="assets/heart-mark.png" alt="">
+        <span class="brand-text">TAILRD <span class="brand-divider">|</span> <span class="brand-heart">HEART</span></span>
       </a>
       <ul class="nav-links" role="list">
         <li><a href="#approach">Approach</a></li>
@@ -72,50 +73,16 @@
         <a class="hero-secondary-link" href="#how-it-works">See how it works ↓</a>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Patient population grid with flagged care gaps">
-        <rect x="1" y="1" width="518" height="418" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-        <text x="36" y="44" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0A1628">Cardiovascular population</text>
-        <text x="36" y="64" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#64748B">Each node is a patient · flagged nodes are open gaps</text>
-        <!-- patient node grid: 10 cols x 6 rows -->
-        <g fill="#CBD5E1">
-          <circle cx="56" cy="106" r="7"/><circle cx="100" cy="106" r="7"/><circle cx="144" cy="106" r="7"/><circle cx="188" cy="106" r="7"/><circle cx="276" cy="106" r="7"/><circle cx="320" cy="106" r="7"/><circle cx="364" cy="106" r="7"/><circle cx="452" cy="106" r="7"/>
-          <circle cx="56" cy="150" r="7"/><circle cx="144" cy="150" r="7"/><circle cx="188" cy="150" r="7"/><circle cx="232" cy="150" r="7"/><circle cx="276" cy="150" r="7"/><circle cx="364" cy="150" r="7"/><circle cx="408" cy="150" r="7"/><circle cx="452" cy="150" r="7"/>
-          <circle cx="100" cy="194" r="7"/><circle cx="144" cy="194" r="7"/><circle cx="232" cy="194" r="7"/><circle cx="276" cy="194" r="7"/><circle cx="320" cy="194" r="7"/><circle cx="408" cy="194" r="7"/><circle cx="452" cy="194" r="7"/>
-          <circle cx="56" cy="238" r="7"/><circle cx="100" cy="238" r="7"/><circle cx="188" cy="238" r="7"/><circle cx="232" cy="238" r="7"/><circle cx="320" cy="238" r="7"/><circle cx="364" cy="238" r="7"/><circle cx="452" cy="238" r="7"/>
-          <circle cx="56" cy="282" r="7"/><circle cx="100" cy="282" r="7"/><circle cx="144" cy="282" r="7"/><circle cx="232" cy="282" r="7"/><circle cx="276" cy="282" r="7"/><circle cx="320" cy="282" r="7"/><circle cx="364" cy="282" r="7"/><circle cx="408" cy="282" r="7"/>
-        </g>
-        <!-- flagged: safety (red) -->
-        <circle cx="232" cy="106" r="8" fill="#DC2626"/>
-        <circle cx="232" cy="106" r="13" fill="none" stroke="#DC2626" stroke-opacity="0.35" stroke-width="2"/>
-        <text x="252" y="98" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#DC2626">Safety</text>
-        <!-- flagged: therapy (amber) -->
-        <circle cx="100" cy="150" r="8" fill="#D97706"/>
-        <circle cx="100" cy="150" r="13" fill="none" stroke="#D97706" stroke-opacity="0.35" stroke-width="2"/>
-        <text x="58" y="178" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#D97706">Therapy gap</text>
-        <!-- flagged: growth (teal) -->
-        <circle cx="364" cy="194" r="8" fill="#0891B2"/>
-        <circle cx="364" cy="194" r="13" fill="none" stroke="#0891B2" stroke-opacity="0.35" stroke-width="2"/>
-        <text x="384" y="198" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0891B2">Growth</text>
-        <!-- flagged: quality (navy) -->
-        <circle cx="144" cy="238" r="8" fill="#0A1628"/>
-        <circle cx="144" cy="238" r="13" fill="none" stroke="#0A1628" stroke-opacity="0.3" stroke-width="2"/>
-        <text x="120" y="266" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0A1628">Quality</text>
-        <!-- flagged: safety 2 -->
-        <circle cx="408" cy="238" r="8" fill="#DC2626"/>
-        <circle cx="408" cy="238" r="13" fill="none" stroke="#DC2626" stroke-opacity="0.35" stroke-width="2"/>
-        <!-- flagged: therapy 2 -->
-        <circle cx="452" cy="282" r="8" fill="#D97706"/>
-        <circle cx="452" cy="282" r="13" fill="none" stroke="#D97706" stroke-opacity="0.35" stroke-width="2"/>
-        <!-- legend -->
-        <g font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#475569">
-          <circle cx="48" cy="348" r="6" fill="#DC2626"/><text x="62" y="352">Safety</text>
-          <circle cx="128" cy="348" r="6" fill="#D97706"/><text x="142" y="352">Therapy</text>
-          <circle cx="222" cy="348" r="6" fill="#0891B2"/><text x="236" y="352">Growth</text>
-          <circle cx="310" cy="348" r="6" fill="#0A1628"/><text x="324" y="352">Quality</text>
-        </g>
-        <text x="36" y="390" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0891B2">780+ algorithms scanning continuously</text>
-      </svg>
+    <div class="hero-visual">
+      <div class="browser-mock">
+        <div class="browser-bar" aria-hidden="true">
+          <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+        </div>
+        <div class="browser-viewport">
+          <img src="assets/screenshots/hf-module.jpg" alt="TAILRD Heart Failure module showing live gap detection across a patient population">
+        </div>
+      </div>
+      <p class="hero-visual-caption">Heart Failure module — live gap detection.</p>
     </div>
   </div>
 </section>
@@ -318,7 +285,7 @@
       <p class="flip-hint-note">Hover or tap a card to see the module in action.</p>
     </div>
     <div class="modules-grid">
-      <div class="flip-card reveal" tabindex="0">
+      <div class="flip-card reveal">
         <div class="flip-inner">
           <div class="flip-front">
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
@@ -331,7 +298,7 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal" tabindex="0">
+      <div class="flip-card reveal">
         <div class="flip-inner">
           <div class="flip-front">
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
@@ -344,7 +311,7 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal" tabindex="0">
+      <div class="flip-card reveal">
         <div class="flip-inner">
           <div class="flip-front">
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-7 9 7v12"/><path d="M9 21v-8h6v8"/></svg></div>
@@ -357,7 +324,7 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal" tabindex="0">
+      <div class="flip-card reveal">
         <div class="flip-inner">
           <div class="flip-front">
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
@@ -370,7 +337,7 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal" tabindex="0">
+      <div class="flip-card reveal">
         <div class="flip-inner">
           <div class="flip-front">
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
@@ -383,7 +350,7 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal" tabindex="0">
+      <div class="flip-card reveal">
         <div class="flip-inner">
           <div class="flip-front">
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -396,7 +363,7 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal" tabindex="0">
+      <div class="flip-card reveal">
         <div class="flip-inner">
           <div class="flip-front">
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
@@ -590,8 +557,8 @@
 <!-- 13. Footer -->
 <footer>
   <div class="container footer-inner">
-    <a href="#top" aria-label="TAILRD Heart — back to top">
-      <img class="footer-logo" src="assets/logo.png" alt="TAILRD | Heart" loading="lazy">
+    <a class="footer-brand" href="#top" aria-label="TAILRD Heart — back to top">
+      <span class="brand-text brand-text-light">TAILRD <span class="brand-divider">|</span> <span class="brand-heart">HEART</span></span>
     </a>
     <nav class="footer-nav" aria-label="Footer">
       <a href="#approach">Approach</a>

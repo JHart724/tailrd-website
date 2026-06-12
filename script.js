@@ -47,23 +47,23 @@
     });
   });
 
-  // --- Nav shadow on scroll ---
+  // --- Nav: solid white + border once scrolled past the hero ---
   var nav = document.querySelector('.nav');
+  var hero = document.querySelector('.hero');
   if (nav) {
-    window.addEventListener('scroll', function () {
-      nav.classList.toggle('scrolled', window.scrollY > 8);
-    }, { passive: true });
+    var updateNav = function () {
+      var threshold = hero ? hero.offsetTop + hero.offsetHeight - 72 : 8;
+      nav.classList.toggle('scrolled', window.scrollY > threshold);
+    };
+    window.addEventListener('scroll', updateNav, { passive: true });
+    window.addEventListener('resize', updateNav, { passive: true });
+    updateNav();
   }
 
-  // --- Flip cards: tap to flip on touch devices (hover handles desktop) ---
-  var hoverCapable = window.matchMedia('(hover: hover)').matches;
+  // --- Flip cards: hover flips on desktop (CSS); tap toggles on touch only ---
   document.querySelectorAll('.flip-card').forEach(function (card) {
     card.addEventListener('click', function () {
-      if (!hoverCapable) card.classList.toggle('flipped');
-    });
-    card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
+      if (window.matchMedia('(hover: none)').matches) {
         card.classList.toggle('flipped');
       }
     });
