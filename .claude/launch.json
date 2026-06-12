@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tailrd-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "C:/Users/JHart/OneDrive/Desktop/tailrd-website", "-l", "3000"],
+      "port": 3000
+    }
+  ]
+}
