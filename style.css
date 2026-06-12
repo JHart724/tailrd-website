@@ -138,10 +138,8 @@ header {
     text-decoration: none;
 }
 
-.nav-mark { height: 44px; width: 44px; }
-
 .brand-text {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--titanium-900);
@@ -234,7 +232,7 @@ header {
 /* ---------- Hero ---------- */
 .hero {
     padding: 80px 0 96px;
-    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    background: var(--white);
 }
 
 .hero-grid {
@@ -764,43 +762,61 @@ header {
 
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-    gap: 20px;
-}
-
-.partners-grid-2 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     max-width: 760px;
     margin: 0 auto;
 }
 
 .partner-card {
-    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 140px;
+    padding: 20px 28px;
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius);
     text-align: center;
-}
-
-.partner-card h4 {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.partner-card h4 a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    color: var(--titanium-900);
     text-decoration: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-.partner-card h4 a:hover { color: var(--chrome-600); text-decoration: underline; }
+
+a.partner-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.partner-logo {
+    max-height: 56px;
+    max-width: 220px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(60%);
+    transition: filter 0.2s ease;
+}
+
+.partner-card:hover .partner-logo { filter: grayscale(0%); }
 
 .partner-card p {
     font-size: 14px;
     color: var(--gray-500);
-    margin-top: 6px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ---------- Logo band ---------- */
+.logo-band {
+    padding: 64px 0;
+    background: var(--white);
+}
+
+.logo-band-img {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* ---------- Team ---------- */
@@ -852,7 +868,7 @@ header {
 /* ---------- Contact ---------- */
 .contact-section {
     padding-top: 96px;
-    background: linear-gradient(160deg, var(--titanium-900) 0%, #1B2A3D 55%, #2A1620 100%);
+    background: var(--titanium-900);
 }
 
 .section-header-light h2 { color: var(--white); }
@@ -1014,14 +1030,12 @@ footer {
     .modules-grid { grid-template-columns: repeat(2, 1fr); }
     .flip-card:nth-child(7) { grid-column: auto; }
 
-    .partners-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 880px) {
     .nav-links, .nav-cta-btn { display: none; }
     .nav-toggle { display: block; }
-    .brand-text { font-size: 17px; }
-    .nav-mark { height: 38px; width: 38px; }
+    .brand-text { font-size: 18px; }
 }
 
 @media (max-width: 720px) {
@@ -1038,7 +1052,7 @@ footer {
 
     .stats-grid, .roi-grid, .tier-grid,
     .diff-grid, .security-grid, .team-grid,
-    .partners-grid, .partners-grid-2,
+    .partners-grid,
     .modules-grid { grid-template-columns: 1fr; }
 
     .step-card { flex: 1 1 100%; }
