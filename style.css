@@ -542,6 +542,75 @@ header {
     color: var(--porsche-500);
 }
 
+/* ---------- Care continuum ---------- */
+.continuum-section { border-top: 1px solid var(--gray-100); }
+
+.continuum-track {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* connecting rail behind the nodes */
+.continuum-track::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: var(--porsche-500);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.continuum-stage {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.continuum-node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--chrome-600);
+    margin-bottom: 16px;
+}
+.continuum-node svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--chrome-600);
+    stroke-width: 1.6;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.continuum-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--titanium-900);
+    line-height: 1.3;
+    max-width: 130px;
+}
+
+.continuum-sub {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--gray-500);
+    max-width: 140px;
+}
+
 /* ---------- Why TAILRD ---------- */
 .diff-grid {
     display: grid;
@@ -716,7 +785,16 @@ header {
 .tier-card p {
     font-size: 14px;
     color: var(--gray-500);
+    margin: 0 26px 16px;
+}
+
+.tier-card .tier-example {
     margin: 0 26px 26px;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray-100);
+    font-size: 13px;
+    font-style: italic;
+    color: var(--chrome-600);
 }
 
 /* ---------- Security ---------- */
@@ -1032,6 +1110,10 @@ footer {
     .modules-grid { grid-template-columns: repeat(2, 1fr); }
     .flip-card:nth-child(7) { grid-column: auto; }
 
+    .continuum-track { flex-wrap: wrap; justify-content: center; gap: 32px 16px; }
+    .continuum-track::before { display: none; }
+    .continuum-stage { flex: 0 0 calc(33.333% - 16px); }
+
 }
 
 @media (max-width: 880px) {
@@ -1058,6 +1140,8 @@ footer {
     .modules-grid { grid-template-columns: 1fr; }
 
     .step-card { flex: 1 1 100%; }
+
+    .continuum-stage { flex: 0 0 calc(50% - 16px); }
 
     .footer-inner { flex-direction: column; }
 }
