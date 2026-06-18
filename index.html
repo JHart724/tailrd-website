@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -86,130 +86,91 @@
   </div>
 </section>
 
-<!-- 3. Stats -->
+<!-- 3. Clinical + financial impact (merged) -->
 <section class="section section-gray" id="stats">
   <div class="container">
     <div class="section-header">
       <h2>Therapy gaps are measurable — and fixable</h2>
-      <p>Despite proven guideline-directed therapies, cardiovascular patients remain dramatically undertreated. TAILRD translates these gaps into prioritized, system-level opportunities.</p>
+      <p>Cardiovascular patients remain dramatically undertreated despite proven guideline-directed therapies — and every gap carries both a clinical and a financial cost. Below: published undertreatment rates, paired with the estimated annual opportunity for a 400-bed program.</p>
     </div>
-    <div class="stats-grid">
-      <div class="stat-card reveal">
-        <div class="stat-module">Heart Failure</div>
-        <div class="stat-number">&lt;1%</div>
-        <div class="stat-label">Patients on optimal GDMT doses</div>
-        <div class="stat-impact">Represents avoidable admissions and downstream cost exposure at scale.</div>
-        <div class="stat-source">CHAMP-HF Registry</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-module">Electrophysiology</div>
-        <div class="stat-number">68%</div>
-        <div class="stat-label">AFib patients under-anticoagulated before stroke</div>
-        <div class="stat-impact">Drives preventable stroke risk, readmissions, and long-term cost exposure.</div>
-        <div class="stat-source">Stroke Unit Studies</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-module">Structural Heart</div>
-        <div class="stat-number">40%</div>
-        <div class="stat-label">Severe aortic stenosis patients remain untreated</div>
-        <div class="stat-impact">Delayed intervention worsens outcomes and constrains service-line capacity.</div>
-        <div class="stat-source">Eur Heart J, 2024</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-module">Coronary</div>
-        <div class="stat-number">42%</div>
-        <div class="stat-label">CAD patients not on guideline-recommended statins</div>
-        <div class="stat-impact">Under-treatment increases event risk and avoidable utilization.</div>
-        <div class="stat-source">MEPS Analysis</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-module">Valvular</div>
-        <div class="stat-number">8.2%</div>
-        <div class="stat-label">VHD prevalence in older adults — mostly undiagnosed</div>
-        <div class="stat-impact">Missed diagnosis delays surveillance, referral, and timely intervention.</div>
-        <div class="stat-source">OxVALVE Study</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-module">Peripheral Vascular</div>
-        <div class="stat-number">44%</div>
-        <div class="stat-label">PAD diagnosed only after specialist referral</div>
-        <div class="stat-impact">Late diagnosis increases limb risk and cardiovascular events.</div>
-        <div class="stat-source">PARTNERS Program</div>
-      </div>
-    </div>
-    <p class="stats-note">We identify your opportunity using CMS benchmark data — no PHI, no EHR connection required to get started.</p>
-    <div class="section-cta">
-      <a class="btn btn-crimson btn-lg" href="#contact">Get Your Free Program Analytics</a>
-    </div>
-  </div>
-</section>
-
-<!-- 4. ROI Model -->
-<section class="section" id="roi">
-  <div class="container">
-    <div class="section-header">
-      <h2>What this means for your health system</h2>
-      <p>Estimated impact for a 400-bed cardiovascular program — based on published society prevalence data and CMS reimbursement benchmarks.</p>
-    </div>
-    <div class="roi-grid">
-      <div class="roi-card reveal">
-        <h3>Heart Failure</h3>
-        <div class="roi-headline">$2.8M</div>
-        <div class="roi-headline-label">readmission penalty avoidance</div>
+    <div class="impact-grid">
+      <div class="impact-card reveal">
+        <div class="impact-module">Heart Failure</div>
+        <div class="impact-stat">&lt;1%</div>
+        <div class="impact-stat-label">Patients on optimal GDMT doses<span class="impact-source">CHAMP-HF Registry</span></div>
+        <div class="impact-divider"></div>
+        <div class="impact-roi">$2.8M</div>
+        <div class="impact-roi-label">readmission penalty avoidance</div>
         <ul>
           <li>340 patients eligible for GDMT optimization</li>
           <li>185 avoidable readmissions</li>
         </ul>
       </div>
-      <div class="roi-card reveal">
-        <h3>Electrophysiology</h3>
-        <div class="roi-headline">$4.1M</div>
-        <div class="roi-headline-label">LAAC/ablation procedure opportunity</div>
+      <div class="impact-card reveal">
+        <div class="impact-module">Electrophysiology</div>
+        <div class="impact-stat">68%</div>
+        <div class="impact-stat-label">AFib patients under-anticoagulated before stroke<span class="impact-source">Stroke Unit Studies</span></div>
+        <div class="impact-divider"></div>
+        <div class="impact-roi">$4.1M</div>
+        <div class="impact-roi-label">LAAC/ablation procedure opportunity</div>
         <ul>
           <li>210 undetected AFib patients</li>
           <li>143 anticoagulation gaps</li>
         </ul>
       </div>
-      <div class="roi-card reveal">
-        <h3>Structural Heart</h3>
-        <div class="roi-headline">$4.2M</div>
-        <div class="roi-headline-label">procedure revenue opportunity</div>
+      <div class="impact-card reveal">
+        <div class="impact-module">Structural Heart</div>
+        <div class="impact-stat">40%</div>
+        <div class="impact-stat-label">Severe aortic stenosis patients remain untreated<span class="impact-source">Eur Heart J, 2024</span></div>
+        <div class="impact-divider"></div>
+        <div class="impact-roi">$4.2M</div>
+        <div class="impact-roi-label">procedure revenue opportunity</div>
         <ul>
           <li>85 unscheduled TAVR candidates</li>
           <li>52 severe AS patients without referral</li>
         </ul>
       </div>
-      <div class="roi-card reveal">
-        <h3>Coronary Revascularization</h3>
-        <div class="roi-headline">$3.4M</div>
-        <div class="roi-headline-label">revascularization opportunity</div>
+      <div class="impact-card reveal">
+        <div class="impact-module">Coronary</div>
+        <div class="impact-stat">42%</div>
+        <div class="impact-stat-label">CAD patients not on guideline-recommended statins<span class="impact-source">MEPS Analysis</span></div>
+        <div class="impact-divider"></div>
+        <div class="impact-roi">$3.4M</div>
+        <div class="impact-roi-label">revascularization opportunity</div>
         <ul>
           <li>180 patients needing Heart Team review</li>
           <li>156 critical safety patients</li>
         </ul>
       </div>
-      <div class="roi-card reveal">
-        <h3>Valvular Surgery</h3>
-        <div class="roi-headline">$1.8M</div>
-        <div class="roi-headline-label">surgical planning opportunity</div>
+      <div class="impact-card reveal">
+        <div class="impact-module">Valvular</div>
+        <div class="impact-stat">8.2%</div>
+        <div class="impact-stat-label">VHD prevalence in older adults — mostly undiagnosed<span class="impact-source">OxVALVE Study</span></div>
+        <div class="impact-divider"></div>
+        <div class="impact-roi">$1.8M</div>
+        <div class="impact-roi-label">surgical planning opportunity</div>
         <ul>
           <li>1,240 patients needing surveillance</li>
           <li>680 untracked post-procedure patients</li>
         </ul>
       </div>
-      <div class="roi-card reveal">
-        <h3>Peripheral Vascular</h3>
-        <div class="roi-headline">$2.4M</div>
-        <div class="roi-headline-label">intervention opportunity</div>
+      <div class="impact-card reveal">
+        <div class="impact-module">Peripheral Vascular</div>
+        <div class="impact-stat">44%</div>
+        <div class="impact-stat-label">PAD diagnosed only after specialist referral<span class="impact-source">PARTNERS Program</span></div>
+        <div class="impact-divider"></div>
+        <div class="impact-roi">$2.4M</div>
+        <div class="impact-roi-label">intervention opportunity</div>
         <ul>
           <li>280 ABI screening gaps</li>
           <li>48 critical limb ischemia patients</li>
         </ul>
       </div>
     </div>
-    <p class="roi-disclaimer">Based on published prevalence data from ACC, AHA, CHAMP-HF, OxVALVE, and PARTNERS registries and CMS reimbursement benchmarks. Actual results vary by patient population and program maturity.</p>
+    <p class="impact-disclaimer">Clinical rates from CHAMP-HF, OxVALVE, PARTNERS, and MEPS registries and published society data (ACC, AHA, Eur Heart J). Financial estimates apply CMS reimbursement benchmarks to a 400-bed program. Actual results vary by patient population and program maturity.</p>
     <div class="section-cta">
-      <a class="btn btn-outline btn-lg" href="#how-it-works">See How It Works For Your Program</a>
+      <a class="btn btn-crimson btn-lg" href="#contact">Get Your Free Program Analytics</a>
+      <a class="section-cta-link" href="#how-it-works">See how it works ↓</a>
     </div>
   </div>
 </section>
@@ -340,9 +301,10 @@
       <p class="flip-hint-note">Hover or tap a card to see the module in action.</p>
     </div>
     <div class="modules-grid">
-      <div class="flip-card reveal">
+      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
         <div class="flip-inner">
           <div class="flip-front">
+            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
             <h3>Heart Failure</h3>
             <p>Surfaces untreated and undertreated HF patients before decompensation occurs.</p>
@@ -353,9 +315,10 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal">
+      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
         <div class="flip-inner">
           <div class="flip-front">
+            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
             <h3>Electrophysiology</h3>
             <p>Identifies rhythm patients who meet criteria for anticoagulation, monitoring, or intervention.</p>
@@ -366,9 +329,10 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal">
+      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
         <div class="flip-inner">
           <div class="flip-front">
+            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-7 9 7v12"/><path d="M9 21v-8h6v8"/></svg></div>
             <h3>Structural Heart</h3>
             <p>Flags echo findings, referral gaps, and delayed interventions across structural disease.</p>
@@ -379,9 +343,10 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal">
+      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
         <div class="flip-inner">
           <div class="flip-front">
+            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
             <h3>Coronary Revascularization</h3>
             <p>Detects missed opportunities in CAD risk stratification, diagnosis, and escalation of care.</p>
@@ -392,9 +357,10 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal">
+      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
         <div class="flip-inner">
           <div class="flip-front">
+            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
             <h3>Valvular Surgery</h3>
             <p>Surfaces progressive valve disease earlier — when intervention can still change outcomes.</p>
@@ -405,9 +371,10 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal">
+      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
         <div class="flip-inner">
           <div class="flip-front">
+            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <h3>Peripheral Vascular</h3>
             <p>Expands PAD detection, closes therapy gaps, and identifies limb-preservation candidates.</p>
@@ -418,9 +385,10 @@
           </div>
         </div>
       </div>
-      <div class="flip-card reveal">
+      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
         <div class="flip-inner">
           <div class="flip-front">
+            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
             <h3>Clinical Research Assist</h3>
             <p>Automates registry abstraction and trial eligibility screening from live clinical data.</p>
@@ -582,7 +550,7 @@
   <div class="container">
     <div class="section-header section-header-light">
       <h2>Start with a Free Program Analytics Report</h2>
-      <p>We'll analyze your cardiovascular program using CMS benchmark data and identify your estimated gap opportunity — no PHI, no EHR connection required.</p>
+      <p>We'll analyze your cardiovascular program using CMS benchmark data and identify your estimated gap opportunity.</p>
     </div>
     <form class="contact-form" action="https://formspree.io/f/xlgpvvvd" method="POST">
       <input type="hidden" name="_subject" value="New TAILRD Lead">
@@ -639,6 +607,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=3"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>

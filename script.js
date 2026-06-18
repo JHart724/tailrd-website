@@ -60,10 +60,14 @@
     updateNav();
   }
 
-  // --- Flip cards: hover flips on desktop (CSS); tap toggles on touch only ---
+  // --- Flip cards: hover flips on desktop (CSS); click/tap toggles a sticky flip on any device ---
   document.querySelectorAll('.flip-card').forEach(function (card) {
     card.addEventListener('click', function () {
-      if (window.matchMedia('(hover: none)').matches) {
+      card.classList.toggle('flipped');
+    });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
         card.classList.toggle('flipped');
       }
     });
