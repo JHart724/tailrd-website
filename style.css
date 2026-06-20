@@ -891,6 +891,7 @@ a.partner-card:hover {
 .logo-band {
     padding: 64px 0;
     background: var(--white);
+    border-top: 1px solid var(--gray-200);
 }
 
 .logo-band-img {
