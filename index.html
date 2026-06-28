@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -213,44 +213,32 @@
     <div class="continuum">
       <div class="continuum-track">
         <div class="continuum-stage reveal">
-          <div class="continuum-node">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
-          </div>
+          <div class="continuum-node"><span class="continuum-num">1</span></div>
           <div class="continuum-label">Upstream Risk Capture</div>
           <div class="continuum-sub">Primary care identification</div>
         </div>
         <div class="continuum-stage reveal">
-          <div class="continuum-node">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          </div>
+          <div class="continuum-node"><span class="continuum-num">2</span></div>
           <div class="continuum-label">Screening &amp; Triage</div>
           <div class="continuum-sub">Diagnostic workup + routing</div>
         </div>
         <div class="continuum-stage reveal">
-          <div class="continuum-node">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
+          <div class="continuum-node"><span class="continuum-num">3</span></div>
           <div class="continuum-label">Medical Management</div>
           <div class="continuum-sub">Guideline therapy optimization</div>
         </div>
         <div class="continuum-stage reveal">
-          <div class="continuum-node">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
+          <div class="continuum-node"><span class="continuum-num">4</span></div>
           <div class="continuum-label">Device Therapy</div>
           <div class="continuum-sub">ICD · CRT · pacing</div>
         </div>
         <div class="continuum-stage reveal">
-          <div class="continuum-node">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-          </div>
+          <div class="continuum-node"><span class="continuum-num">5</span></div>
           <div class="continuum-label">Procedural Intervention</div>
           <div class="continuum-sub">PCI · TAVR · ablation · SAVR</div>
         </div>
         <div class="continuum-stage reveal">
-          <div class="continuum-node">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
+          <div class="continuum-node"><span class="continuum-num">6</span></div>
           <div class="continuum-label">Advanced Therapies</div>
           <div class="continuum-sub">LVAD · transplant</div>
         </div>
@@ -334,26 +322,36 @@
 <section class="section section-gray" id="intelligence">
   <div class="container">
     <div class="section-header">
-      <h2>Intelligence at Every Level</h2>
+      <h2>Intelligence at every level</h2>
+      <p>The same gap intelligence, surfaced differently for each person who acts on it.</p>
     </div>
-    <div class="tier-grid">
-      <div class="tier-card reveal">
-        <img src="assets/screenshots/serviceline-financial.jpg" alt="Executive financial and margin benchmarking dashboard" loading="lazy">
-        <h3>Executive</h3>
-        <p>Command center across all 6 modules — clinical gap intelligence, quality benchmarking, financial performance, competitive market intelligence.</p>
-        <p class="tier-example">Example: Undiagnosed HFpEF, untreated AF, silent structural disease</p>
+    <div class="tier-rows">
+      <div class="tier-row reveal">
+        <div class="tier-media"><img src="assets/screenshots/serviceline-financial.jpg" alt="Executive financial and margin benchmarking dashboard" loading="lazy"></div>
+        <div class="tier-content">
+          <span class="tier-kicker">For leadership</span>
+          <h3>Executive</h3>
+          <p>Command center across all six modules — clinical gap intelligence, quality benchmarking, financial performance, and competitive market intelligence.</p>
+          <p class="tier-example">Example: Undiagnosed HFpEF, untreated AF, silent structural disease</p>
+        </div>
       </div>
-      <div class="tier-card reveal">
-        <img src="assets/screenshots/serviceline-insights.jpg" alt="Service line analytics and insights view" loading="lazy">
-        <h3>Service Line</h3>
-        <p>AI-detected insights, care gap analysis, revenue pipeline, and margin improvement opportunities by module.</p>
-        <p class="tier-example">Example: Patients eligible for GDMT, anticoagulation, or referral</p>
+      <div class="tier-row reveal">
+        <div class="tier-media"><img src="assets/screenshots/serviceline-insights.jpg" alt="Service line analytics and insights view" loading="lazy"></div>
+        <div class="tier-content">
+          <span class="tier-kicker">For service-line directors</span>
+          <h3>Service Line</h3>
+          <p>AI-detected insights, care-gap analysis, revenue pipeline, and margin-improvement opportunities by module.</p>
+          <p class="tier-example">Example: Patients eligible for GDMT, anticoagulation, or referral</p>
+        </div>
       </div>
-      <div class="tier-card reveal">
-        <img src="assets/screenshots/coronary-module.jpg" alt="Care team patient-level gap worklist view" loading="lazy">
-        <h3>Care Team</h3>
-        <p>Patient-level gap worklists, safety alerts, recommended actions, one-click referral.</p>
-        <p class="tier-example">Example: Referral, imaging, procedure, or therapy initiation</p>
+      <div class="tier-row reveal">
+        <div class="tier-media"><img src="assets/screenshots/coronary-module.jpg" alt="Care team patient-level gap worklist view" loading="lazy"></div>
+        <div class="tier-content">
+          <span class="tier-kicker">For clinicians</span>
+          <h3>Care Team</h3>
+          <p>Patient-level gap worklists, safety alerts, recommended actions, and one-click referral.</p>
+          <p class="tier-example">Example: Referral, imaging, procedure, or therapy initiation</p>
+        </div>
       </div>
     </div>
   </div>
