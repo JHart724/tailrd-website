@@ -941,8 +941,39 @@ a.partner-card:hover {
 
 /* ---------- Contact ---------- */
 .contact-section {
+    position: relative;
+    overflow: hidden;
     padding-top: 96px;
     background: var(--titanium-900);
+}
+.contact-section > .container { position: relative; z-index: 2; }
+
+/* brushed-metallic brand side panels (chrome blue left, arterial red right) */
+.contact-section::before,
+.contact-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 170px;
+    z-index: 1;
+    pointer-events: none;
+}
+.contact-section::before {
+    left: 0;
+    background:
+        linear-gradient(90deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.05) 0 2px, rgba(0,0,0,0.06) 2px 4px),
+        radial-gradient(120% 60% at 20% 0%, rgba(255,255,255,0.10), transparent 60%),
+        linear-gradient(150deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
+}
+.contact-section::after {
+    right: 0;
+    background:
+        linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.05) 0 2px, rgba(0,0,0,0.06) 2px 4px),
+        radial-gradient(120% 60% at 80% 0%, rgba(255,255,255,0.08), transparent 60%),
+        linear-gradient(210deg, #7a1a2e 0%, #5c1a1a 45%, #2a1016 100%);
 }
 
 .section-header-light h2 { color: var(--white); }
@@ -1130,6 +1161,7 @@ footer {
     .section { padding: 64px 0; }
     .hero { padding: 56px 0 64px; }
     .contact-section { padding-top: 72px; }
+    .contact-section::before, .contact-section::after { width: 64px; }
 
     .impact-grid,
     .diff-grid, .security-grid, .team-grid,
