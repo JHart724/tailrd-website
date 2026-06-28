@@ -347,6 +347,17 @@ header {
     text-align: center;
 }
 
+.section-kicker {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--chrome-600);
+    margin-bottom: 14px;
+}
+.section-header-light .section-kicker { color: var(--porsche-500); }
+
 .section-header h2 {
     font-family: var(--font-display);
     font-size: clamp(33px, 3.8vw, 43px);
