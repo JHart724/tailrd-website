@@ -60,19 +60,6 @@
     updateNav();
   }
 
-  // --- Flip cards: hover flips on desktop (CSS); click/tap toggles a sticky flip on any device ---
-  document.querySelectorAll('.flip-card').forEach(function (card) {
-    card.addEventListener('click', function () {
-      card.classList.toggle('flipped');
-    });
-    card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        card.classList.toggle('flipped');
-      }
-    });
-  });
-
   // --- One-shot scroll reveal ---
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {

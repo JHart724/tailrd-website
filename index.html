@@ -18,8 +18,8 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=8">
 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -264,107 +264,65 @@
   <div class="container">
     <div class="section-header">
       <h2>Six clinical modules + Research Assist. One integrated platform.</h2>
-      <p class="flip-hint-note">Hover or tap a card to see the module in action.</p>
+      <p>Each module detects therapy gaps, flags missed interventions, and routes prioritized worklists to the right team.</p>
     </div>
     <div class="modules-grid">
-      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
-            <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-            <h3>Heart Failure</h3>
-            <p>Surfaces untreated and undertreated HF patients before decompensation occurs.</p>
-          </div>
-          <div class="flip-back">
-            <img src="assets/screenshots/hf-module.jpg" alt="Heart Failure module screenshot" loading="lazy">
-            <div class="flip-caption">Clinical gap detection across 47 active algorithms — 20,588 patients identified, $24.1M opportunity</div>
-          </div>
+      <article class="module-card reveal">
+        <div class="module-shot"><img src="assets/screenshots/hf-module.jpg" alt="Heart Failure module dashboard" loading="lazy"></div>
+        <div class="module-body">
+          <h3>Heart Failure</h3>
+          <p>Surfaces untreated and undertreated HF patients before decompensation occurs.</p>
+          <p class="module-metric">47 algorithms · 20,588 patients · $24.1M opportunity</p>
         </div>
-      </div>
-      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
-            <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-            <h3>Electrophysiology</h3>
-            <p>Identifies rhythm patients who meet criteria for anticoagulation, monitoring, or intervention.</p>
-          </div>
-          <div class="flip-back">
-            <img src="assets/screenshots/ep-module.jpg" alt="Electrophysiology module screenshot" loading="lazy">
-            <div class="flip-caption">Gap intelligence across 1,730 patients — LAAC candidates, CSP/CRT upgrades, Dofetilide REMS tracked</div>
-          </div>
+      </article>
+      <article class="module-card reveal">
+        <div class="module-shot"><img src="assets/screenshots/ep-module.jpg" alt="Electrophysiology module dashboard" loading="lazy"></div>
+        <div class="module-body">
+          <h3>Electrophysiology</h3>
+          <p>Identifies rhythm patients who meet criteria for anticoagulation, monitoring, or intervention.</p>
+          <p class="module-metric">1,730 patients · LAAC · CSP/CRT · Dofetilide REMS</p>
         </div>
-      </div>
-      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
-            <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-7 9 7v12"/><path d="M9 21v-8h6v8"/></svg></div>
-            <h3>Structural Heart</h3>
-            <p>Flags echo findings, referral gaps, and delayed interventions across structural disease.</p>
-          </div>
-          <div class="flip-back">
-            <img src="assets/screenshots/structural-module.jpg" alt="Structural Heart module screenshot" loading="lazy">
-            <div class="flip-caption">Structural heart disease risk mapping with TAVR pathway analytics and surgical planning network</div>
-          </div>
+      </article>
+      <article class="module-card reveal">
+        <div class="module-shot"><img src="assets/screenshots/structural-module.jpg" alt="Structural Heart module dashboard" loading="lazy"></div>
+        <div class="module-body">
+          <h3>Structural Heart</h3>
+          <p>Flags echo findings, referral gaps, and delayed interventions across structural disease.</p>
+          <p class="module-metric">1,814 patients · 24 active gaps · $10.8M opportunity</p>
         </div>
-      </div>
-      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
-            <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <h3>Coronary Revascularization</h3>
-            <p>Detects missed opportunities in CAD risk stratification, diagnosis, and escalation of care.</p>
-          </div>
-          <div class="flip-back">
-            <img src="assets/screenshots/coronary-module.jpg" alt="Coronary Revascularization module screenshot" loading="lazy">
-            <div class="flip-caption">26 auto-detected gaps across 2,330 patients — SAQ outcomes, revenue pipeline, CABG vs PCI decision support</div>
-          </div>
+      </article>
+      <article class="module-card reveal">
+        <div class="module-shot"><img src="assets/screenshots/coronary-module.jpg" alt="Coronary Revascularization module dashboard" loading="lazy"></div>
+        <div class="module-body">
+          <h3>Coronary Revascularization</h3>
+          <p>Detects missed opportunities in CAD risk stratification, diagnosis, and escalation of care.</p>
+          <p class="module-metric">2,330 patients · 26 auto-detected gaps · CABG vs PCI support</p>
         </div>
-      </div>
-      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
-            <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-            <h3>Valvular Surgery</h3>
-            <p>Surfaces progressive valve disease earlier — when intervention can still change outcomes.</p>
-          </div>
-          <div class="flip-back">
-            <img src="assets/screenshots/valvular-module.jpg" alt="Valvular Surgery module screenshot" loading="lazy">
-            <div class="flip-caption">Valvular disease surgical planning network — Echo → Cath → Surgery coordination across 1,784 patients</div>
-          </div>
+      </article>
+      <article class="module-card reveal">
+        <div class="module-shot"><img src="assets/screenshots/valvular-module.jpg" alt="Valvular Surgery module dashboard" loading="lazy"></div>
+        <div class="module-body">
+          <h3>Valvular Surgery</h3>
+          <p>Surfaces progressive valve disease earlier — when intervention can still change outcomes.</p>
+          <p class="module-metric">1,784 patients · Echo → Cath → Surgery coordination</p>
         </div>
-      </div>
-      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
-            <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <h3>Peripheral Vascular</h3>
-            <p>Expands PAD detection, closes therapy gaps, and identifies limb-preservation candidates.</p>
-          </div>
-          <div class="flip-back">
-            <img src="assets/screenshots/peripheral-module.jpg" alt="Peripheral Vascular module screenshot" loading="lazy">
-            <div class="flip-caption">ABI screening, AAA surveillance, TCAR/Carotid and VTE gap detection across 1,150 patients</div>
-          </div>
+      </article>
+      <article class="module-card reveal">
+        <div class="module-shot"><img src="assets/screenshots/peripheral-module.jpg" alt="Peripheral Vascular module dashboard" loading="lazy"></div>
+        <div class="module-body">
+          <h3>Peripheral Vascular</h3>
+          <p>Expands PAD detection, closes therapy gaps, and identifies limb-preservation candidates.</p>
+          <p class="module-metric">1,150 patients · ABI · AAA · TCAR · VTE</p>
         </div>
-      </div>
-      <div class="flip-card reveal" tabindex="0" role="button" aria-label="Show module preview">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <span class="flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Preview</span>
-            <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-            <h3>Clinical Research Assist</h3>
-            <p>Automates registry abstraction and trial eligibility screening from live clinical data.</p>
-          </div>
-          <div class="flip-back">
-            <img src="assets/screenshots/registry-view.jpg" alt="Clinical Research Assist module screenshot" loading="lazy">
-            <div class="flip-caption">Automated registry pre-population across CathPCI, TVT, ICD, GWTG-HF — 80% auto-fill rate, 212 abstraction hours saved</div>
-          </div>
+      </article>
+      <article class="module-card reveal">
+        <div class="module-shot"><img src="assets/screenshots/registry-view.jpg" alt="Clinical Research Assist module dashboard" loading="lazy"></div>
+        <div class="module-body">
+          <h3>Clinical Research Assist</h3>
+          <p>Automates registry abstraction and trial eligibility screening from live clinical data.</p>
+          <p class="module-metric">80% auto-fill · 212 abstraction hours saved / month</p>
         </div>
-      </div>
+      </article>
     </div>
     <div class="section-cta">
       <a class="btn btn-crimson btn-lg" href="#contact">Request Free Program Analytics</a>
@@ -608,6 +566,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=8"></script>
 </body>
 </html>
