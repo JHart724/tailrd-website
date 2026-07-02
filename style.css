@@ -876,6 +876,16 @@ a.partner-card:hover {
     transition: filter 0.2s ease;
 }
 
+.partner-logo-text {
+    display: inline-flex;
+    align-items: center;
+    min-height: 56px;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    color: var(--chrome-600);
+}
+
 .partner-card:hover .partner-logo { filter: grayscale(0%); }
 
 .partner-card p {
