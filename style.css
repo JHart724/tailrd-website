@@ -841,6 +841,11 @@ header {
     margin: 0 auto;
 }
 
+.partners-grid-solo {
+    grid-template-columns: minmax(0, 360px);
+    justify-content: center;
+}
+
 .partner-card {
     display: flex;
     flex-direction: column;
