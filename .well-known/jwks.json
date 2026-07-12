@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS256",
+      "kid": "tailrd-2026-07",
+      "n": "z1Em-7nxH2QowiV0HAlVgyj-bmvncQM3Kkd2sZQwPcZIzkfdxV7j-RIR0XUMABoBwPuqA1akszdNwBdZOFLBgw0foiobg0NKAfT890MFZL3Ck6YBmqpS8TZhsfJMgOTuuczpJMGA1JXZ4UXSnDYeE3xcD0dJfyhOa0Owl_Yx3jMqLXpLngKmw0gpBh7g1rUG5-525Tan8ePTnmEKcA4iFnPABqXFa0NNUWlv0ei_m9gMF-cr__p2V2stNACw9RYnU3s9WL2o251mlO9awdrnfHqpuNUdc8IUqxM9Q7oblu14Bgb_vIOwo19lMZ2ylA9SLpKaKybTc2xXTIyES2htMQ",
+      "e": "AQAB"
+    }
+  ]
+}
