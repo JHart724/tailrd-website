@@ -16,7 +16,7 @@
     --arterial-600: #7A1A2E;
     --arterial-700: #621523;
     --white: #FFFFFF;
-    --gray-50: #F8FAFC;
+    --gray-50: #F4F8FC;
     --gray-100: #F1F5F9;
     --gray-200: #E2E8F0;
     --gray-400: #94A3B8;
@@ -1248,4 +1248,86 @@ footer {
     .logo-band-img { max-width: 560px; }
     .contact-form { max-width: 560px; }
     .contact-section::before, .contact-section::after { width: 260px; }
+}
+
+/* ---------- Dark brand section (titanium + metallic blue/red edges) ---------- */
+.section-dark {
+    position: relative;
+    overflow: hidden;
+    background: var(--titanium-900);
+}
+.section-dark > .container { position: relative; z-index: 2; }
+.section-dark.continuum-section { border-top: none; }
+
+.section-dark::before,
+.section-dark::after,
+footer::before,
+footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 170px;
+    z-index: 1;
+    pointer-events: none;
+}
+.section-dark::before {
+    left: 0;
+    background:
+        linear-gradient(90deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
+        radial-gradient(120% 60% at 20% 0%, rgba(255,255,255,0.10), transparent 60%),
+        linear-gradient(150deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
+}
+.section-dark::after {
+    right: 0;
+    background:
+        linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
+        radial-gradient(120% 60% at 80% 0%, rgba(255,255,255,0.08), transparent 60%),
+        linear-gradient(210deg, #7a1a2e 0%, #5c1a1a 45%, #2a1016 100%);
+}
+
+/* footer: same edges, no top highlight so it continues the contact section seamlessly */
+footer { position: relative; overflow: hidden; }
+footer > .container { position: relative; z-index: 2; }
+footer::before {
+    left: 0;
+    background:
+        linear-gradient(90deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
+        linear-gradient(150deg, #1f3f58 0%, #1b3040 50%, #13212d 100%);
+}
+footer::after {
+    right: 0;
+    background:
+        linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
+        linear-gradient(210deg, #5c1a1a 0%, #3d1218 50%, #2a1016 100%);
+}
+
+/* dark-section typography + continuum on titanium */
+.section-dark .section-kicker { color: var(--porsche-500); }
+.section-dark .section-header h2 { color: var(--white); }
+.section-dark .section-header p { color: rgba(255, 255, 255, 0.72); }
+.section-dark .continuum-track::before {
+    background: linear-gradient(90deg, var(--porsche-500) 0%, #C75D72 100%);
+    opacity: 0.55;
+}
+.section-dark .continuum-node {
+    background: var(--white);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+.section-dark .continuum-num { color: var(--titanium-900); }
+.section-dark .continuum-label { color: var(--white); }
+.section-dark .continuum-sub { color: rgba(255, 255, 255, 0.62); }
+
+@media (max-width: 720px) {
+    .section-dark::before, .section-dark::after,
+    footer::before, footer::after { width: 64px; }
+}
+@media (min-width: 1700px) {
+    .section-dark::before, .section-dark::after,
+    footer::before, footer::after { width: 260px; }
 }
