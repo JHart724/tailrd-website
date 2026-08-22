@@ -638,7 +638,7 @@ header {
 .diff-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: start;
+    align-items: stretch;
     gap: 28px;
     max-width: 960px;
     margin: 0 auto;
@@ -794,7 +794,7 @@ header {
 .security-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: start;
+    align-items: stretch;
     gap: 28px;
     max-width: 960px;
     margin: 0 auto;
@@ -978,7 +978,7 @@ a.partner-card:hover {
     left: 0;
     background:
         linear-gradient(90deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
-        repeating-linear-gradient(180deg, rgba(255,255,255,0.05) 0 2px, rgba(0,0,0,0.06) 2px 4px),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 20% 0%, rgba(255,255,255,0.10), transparent 60%),
         linear-gradient(150deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
 }
@@ -986,7 +986,7 @@ a.partner-card:hover {
     right: 0;
     background:
         linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
-        repeating-linear-gradient(180deg, rgba(255,255,255,0.05) 0 2px, rgba(0,0,0,0.06) 2px 4px),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 80% 0%, rgba(255,255,255,0.08), transparent 60%),
         linear-gradient(210deg, #7a1a2e 0%, #5c1a1a 45%, #2a1016 100%);
 }
@@ -1202,4 +1202,50 @@ footer {
     .continuum-stage { flex: 0 0 calc(50% - 16px); }
 
     .footer-inner { flex-direction: column; }
+}
+
+/* ---------- Large screens: scale the whole composition up ---------- */
+@media (min-width: 1700px) {
+    body { font-size: 18px; }
+    .container { max-width: 1480px; padding: 0 40px; }
+    .section { padding: 120px 0; }
+    .section-header { max-width: 900px; margin-bottom: 72px; }
+    .section-header h2 { font-size: 48px; }
+    .section-header p { font-size: 20px; }
+    .hero { padding: 100px 0 120px; }
+    .hero h1 { font-size: 66px; }
+    .hero-definition { font-size: 20px; }
+    .hero-subhead { font-size: 17px; }
+    .hero-panel img { max-height: 520px; }
+    .impact-grid { gap: 32px; }
+    .impact-card { padding: 40px 36px; }
+    .diff-grid, .security-grid { max-width: 1180px; gap: 32px; }
+    .diff-card, .security-card { padding: 40px; }
+    .diff-card h3, .security-card h3 { font-size: 20px; }
+    .diff-card p, .security-card p { font-size: 16px; }
+    .modules-grid { gap: 32px; }
+    .module-shot { height: 240px; }
+    .module-body { padding: 28px 30px 30px; }
+    .module-body h3 { font-size: 21px; }
+    .module-body p { font-size: 16px; }
+    .tier-rows { max-width: 1300px; gap: 80px; }
+    .tier-row { gap: 72px; }
+    .tier-media img { height: 400px; }
+    .tier-content h3 { font-size: 34px; }
+    .tier-content > p { font-size: 17px; }
+    .continuum-node { width: 72px; height: 72px; }
+    .continuum-num { font-size: 30px; }
+    .continuum-label { font-size: 15px; max-width: 150px; }
+    .continuum-sub { font-size: 14px; max-width: 160px; }
+    .steps-flow { max-width: 1400px; margin: 0 auto; gap: 16px; }
+    .step-card { padding: 36px 30px; }
+    .step-card p { font-size: 16px; }
+    .partners-grid { max-width: 900px; gap: 24px; }
+    .partner-card { height: 156px; }
+    .partner-logo { max-height: 64px; max-width: 260px; }
+    .team-grid { max-width: 1160px; gap: 32px; }
+    .team-photo { width: 136px; height: 136px; }
+    .logo-band-img { max-width: 560px; }
+    .contact-form { max-width: 560px; }
+    .contact-section::before, .contact-section::after { width: 260px; }
 }
