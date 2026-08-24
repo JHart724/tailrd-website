@@ -161,29 +161,11 @@ header {
     text-decoration: none;
 }
 
-.nav-logo { height: 48px; width: auto; }
+.nav-logo { height: 54px; width: auto; filter: contrast(1.12) saturate(1.25); }
 
-.brand-text {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--titanium-900);
-    white-space: nowrap;
-}
 
-.brand-divider {
-    font-weight: 400;
-    color: var(--gray-400);
-}
 
-.brand-heart {
-    font-weight: 600;
-    color: var(--arterial-600);
-}
 
-.brand-text-light { color: var(--white); }
-.brand-text-light .brand-divider { color: var(--gray-500); }
-.brand-text-light .brand-heart { color: #C75D72; }
 
 .nav-links {
     display: flex;
@@ -1172,7 +1154,7 @@ footer {
 @media (max-width: 880px) {
     .nav-links, .nav-cta-btn { display: none; }
     .nav-toggle { display: block; }
-    .nav-logo { height: 38px; }
+    .nav-logo { height: 44px; }
 }
 
 @media (max-width: 720px) {
@@ -1330,4 +1312,14 @@ footer::after {
 @media (min-width: 1700px) {
     .section-dark::before, .section-dark::after,
     footer::before, footer::after { width: 260px; }
+}
+
+/* footer: real wordmark on a white plate (asset has baked-in white bg) */
+.footer-logo-img {
+    height: 36px;
+    width: auto;
+    padding: 8px 16px;
+    background: var(--white);
+    border-radius: 10px;
+    box-sizing: content-box;
 }
