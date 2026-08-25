@@ -970,7 +970,7 @@ a.partner-card:hover {
         linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 80% 0%, rgba(255,255,255,0.08), transparent 60%),
-        linear-gradient(210deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
+        linear-gradient(210deg, #7a1a2e 0%, #5c1a1a 45%, #2a1016 100%);
 }
 
 .section-header-light h2 { color: var(--white); }
@@ -1267,7 +1267,7 @@ footer::after {
         linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 80% 0%, rgba(255,255,255,0.08), transparent 60%),
-        linear-gradient(210deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
+        linear-gradient(210deg, #7a1a2e 0%, #5c1a1a 45%, #2a1016 100%);
 }
 
 /* footer: same edges, no top highlight so it continues the contact section seamlessly */
@@ -1285,7 +1285,7 @@ footer::after {
     background:
         linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
-        linear-gradient(210deg, #1f3f58 0%, #1b3040 50%, #13212d 100%);
+        linear-gradient(210deg, #5c1a1a 0%, #3d1218 50%, #2a1016 100%);
 }
 
 /* dark-section typography + continuum on titanium */
@@ -1293,7 +1293,7 @@ footer::after {
 .section-dark .section-header h2 { color: var(--white); }
 .section-dark .section-header p { color: rgba(255, 255, 255, 0.72); }
 .section-dark .continuum-track::before {
-    background: linear-gradient(90deg, var(--porsche-500) 0%, #C9D8E6 100%);
+    background: linear-gradient(90deg, var(--porsche-500) 0%, #C75D72 100%);
     opacity: 0.55;
 }
 .section-dark .continuum-node {
