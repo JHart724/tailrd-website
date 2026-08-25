@@ -962,7 +962,7 @@ a.partner-card:hover {
         linear-gradient(90deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 20% 0%, rgba(255,255,255,0.10), transparent 60%),
-        linear-gradient(150deg, #A9BFD4 0%, #7C97AF 45%, #2A3B4E 100%);
+        linear-gradient(150deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
 }
 .contact-section::after {
     right: 0;
@@ -970,7 +970,7 @@ a.partner-card:hover {
         linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 80% 0%, rgba(255,255,255,0.08), transparent 60%),
-        linear-gradient(210deg, #A9BFD4 0%, #7C97AF 45%, #2A3B4E 100%);
+        linear-gradient(210deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
 }
 
 .section-header-light h2 { color: var(--white); }
@@ -1259,7 +1259,7 @@ footer::after {
         linear-gradient(90deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 20% 0%, rgba(255,255,255,0.10), transparent 60%),
-        linear-gradient(150deg, #A9BFD4 0%, #7C97AF 45%, #2A3B4E 100%);
+        linear-gradient(150deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
 }
 .section-dark::after {
     right: 0;
@@ -1267,7 +1267,7 @@ footer::after {
         linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
         radial-gradient(120% 60% at 80% 0%, rgba(255,255,255,0.08), transparent 60%),
-        linear-gradient(210deg, #A9BFD4 0%, #7C97AF 45%, #2A3B4E 100%);
+        linear-gradient(210deg, #28506e 0%, #2C4A60 45%, #13212d 100%);
 }
 
 /* footer: same edges, no top highlight so it continues the contact section seamlessly */
@@ -1278,14 +1278,14 @@ footer::before {
     background:
         linear-gradient(90deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
-        linear-gradient(150deg, #8FA9C0 0%, #64809A 50%, #22303F 100%);
+        linear-gradient(150deg, #1f3f58 0%, #1b3040 50%, #13212d 100%);
 }
 footer::after {
     right: 0;
     background:
         linear-gradient(270deg, rgba(17,24,39,0) 55%, rgba(17,24,39,1) 100%),
         repeating-linear-gradient(180deg, rgba(255,255,255,0.03) 0 3px, rgba(0,0,0,0.035) 3px 6px),
-        linear-gradient(210deg, #8FA9C0 0%, #64809A 50%, #22303F 100%);
+        linear-gradient(210deg, #1f3f58 0%, #1b3040 50%, #13212d 100%);
 }
 
 /* dark-section typography + continuum on titanium */
