@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS384",
+      "kid": "tailrd-nonprod-2026-09",
+      "n": "t8GZ7XUFQ2yLMIv4lBMW7fWhhnFk5CyhOAo5PgI4oROpr9POrBAo9i-jiM720JKPGQZi5m-JM-_LzazsrxNnOsEGDazfF26FIsWuWZ-3xQ9BMV7v5vFeTvaCg_ivCUjVT6-6VsWASz8IjddTuoDuHyCTEZi_SRU_x7rUwbMNe9WAw9YZCrqxvOHIOvnrWHGW9sEMTgSML7oBUQBrWtZ-T2E9pgjnZYWbL9CHoOnkc1dcF5_YF1cwCEWeODSjkCelOwKAC4iljDjQP4UQdst2fwA-xSj_1A8OkYDNg_tG9MNKLg1f-J9bUNN03z2QDjYruWD6QYic1m2PUHJBNTJnGQ",
+      "e": "AQAB"
+    }
+  ]
+}
