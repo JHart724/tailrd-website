@@ -31,15 +31,8 @@
     });
   }
 
-  // --- Placeholder links (Privacy / Terms): no navigation, no JS errors ---
-  document.querySelectorAll('a.placeholder-link').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-    });
-  });
-
-  // --- Smooth in-page scrolling (skips bare "#" placeholders) ---
-  document.querySelectorAll('a[href^="#"]:not(.placeholder-link)').forEach(function (a) {
+  // --- Smooth in-page scrolling ---
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       var href = a.getAttribute('href');
       if (!href || href === '#') return;
