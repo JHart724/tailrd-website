@@ -1048,6 +1048,42 @@ a.partner-card:hover {
     text-align: center;
 }
 
+/* ---------- Legal pages (privacy, terms) ---------- */
+.legal { padding: 72px 0 96px; }
+
+.legal-article {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.legal-article h1 {
+    font-family: var(--font-display);
+    font-size: clamp(33px, 3.8vw, 43px);
+    font-weight: 600;
+    letter-spacing: -0.25px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.legal-article h2 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 40px 0 12px;
+}
+
+.legal-article p { margin-bottom: 16px; }
+
+.legal-effective {
+    font-size: 15px;
+    color: var(--gray-600);
+}
+
+.legal-article a {
+    color: var(--chrome-600);
+    font-weight: 600;
+}
+
 /* ---------- Footer ---------- */
 footer {
     padding: 40px 0 28px;
