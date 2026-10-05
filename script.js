@@ -12,6 +12,7 @@
   function setMenuOpen(open) {
     if (!toggle || !mobileMenu) return;
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     mobileMenu.hidden = !open;
   }
 
@@ -23,7 +24,10 @@
       if (e.target.closest('a')) setMenuOpen(false);
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') setMenuOpen(false);
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setMenuOpen(false);
+        toggle.focus();
+      }
     });
   }
 
