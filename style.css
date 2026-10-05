@@ -1005,7 +1005,6 @@ a.partner-card:hover {
 }
 
 .form-row input:focus {
-    outline: none;
     border-color: var(--porsche-500);
     background: rgba(255, 255, 255, 0.1);
 }
